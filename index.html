@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Integração Power BI + SQL</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #666eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
+            margin: -40px -40px 30px -40px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.3em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .emoji {
+            font-size: 1.4em;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            color: #666eea;
+            border-bottom: 2px solid #666eea;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .tools li {
+            background: #f0f9ff;
+            margin: 10px 0;
+            padding: 10px;
+            border-left: 4px solid #666eea;
+            border-radius: 5px;
+            list-style-type: none;
+        }
+
+        /* Power BI Embed Responsivo */
+        .pb-container {
+            position: relative;
+            width: 100%;
+            max-width: 1280px;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 */
+            margin: 30px auto;
+        }
+
+        .pb-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="header">
+            <h1>
+                <span class="emoji">📈</span>
+                Commercial Report
+                <span class="emoji">🌍</span>
+            </h1>
+
+            <p>
+                Integrating different tools is essential to take full advantage of each one's strengths.
+                In this project, a commercial report was developed using Microsoft's AdventureWorks database
+                (<a href="https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms" target="_blank">link</a>).
+                Based on a module from Hashtag Treinamentos’ SQL course, SQL Server was used for ETL and data preparation,
+                followed by integration with Power BI to create visual indicators and business insights.
+            </p>
+        </div>
+
+        <!-- SECTION: OVERVIEW -->
+        <div class="section">
+            <h2>On the “Overview” page, we have:</h2>
+            <ul>
+                <li>Total revenue;</li>
+                <li>Quantity sold;</li>
+                <li>Total product categories;</li>
+                <li>Number of customers;</li>
+                <li>Total revenue and total profit by month;</li>
+                <li>Profit margin;</li>
+                <li>Profit by country;</li>
+                <li>Quantity sold per month;</li>
+            </ul>
+        </div>
+
+        <!-- SECTION: CUSTOMERS -->
+        <div class="section">
+            <h2>On the “Customers” page, we have:</h2>
+            <ul>
+                <li>Sales by country;</li>
+                <li>Customers by country;</li>
+                <li>Total product categories;</li>
+                <li>Sales by gender;</li>
+                <li>Sales by category;</li>
+            </ul>
+        </div>
+
+        <!-- SECTION: TOOLS -->
+        <div class="section tools">
+            <h2>Tools used:</h2>
+            <ul>
+                <li>Power BI (data analysis, measures, charts, reporting);</li>
+                <li>SQL Server (data extraction and transformation);</li>
+                <li>PowerPoint (dashboard layout design);</li>
+            </ul>
+        </div>
+
+        <!-- POWER BI REPORT -->
+        <div class="pb-container">
+            <iframe 
+                class="pb-iframe"
+                title="Projeto Integração Power BI SQL"
+                src="https://app.powerbi.com/view?r=eyJrIjoiMzIzMTliMzQtZDU4NC00MzkxLTlmNzMtNjc4MTJmOTk0YjM2IiwidCI6IjQ3ZDY4Nzk2LWM2M2UtNGQ3YS1hNTc3LWE2MmFjMWM5MGVlZSIsImMiOjl9"
+                allowfullscreen="true">
+            </iframe>
+        </div>
+
+    </div>
+</body>
+</html>
